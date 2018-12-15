@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AccessibleObject.h" />
     <ClInclude Include="AppContainerProfile.h" />
     <ClInclude Include="AppContainerWrapper.h" />
     <ClInclude Include="pch.h" />

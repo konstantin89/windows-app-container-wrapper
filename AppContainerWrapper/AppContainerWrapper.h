@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include "AppContainerProfile.h"
+#include "AccessibleObject.h"
 
 class AppContainerWrapper
 {
@@ -25,9 +26,9 @@ public:
 		__in AppContainerProfile& aProfile,
 		__out LPPROCESS_INFORMATION aProcessInfo);
 
-	static DWORD GrantAccessToFiles(
+	static DWORD GrantAccessToObjects(
 		__in AppContainerProfile& aProfile,
-		__in std::vector<std::wstring>& aAllowedFiles);
+		__in std::vector<AccessibleObject>& aAllowedObjects);
 
 private:
 	static DWORD createProfile(
@@ -43,6 +44,10 @@ private:
 		__in std::vector<std::wstring>& aFilesWithGrantedAccess,
 		__in int aProcCreationParams,
 		__out LPPROCESS_INFORMATION aProcessInfo);
+
+	static DWORD grantAccessToObject(
+		__in PSID aAppContainerSid,
+		__in AccessibleObject aObjectToGrantAccessTo);
 };
 
 

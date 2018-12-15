@@ -24,6 +24,9 @@
     <ClInclude Include="AppContainerProfile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AccessibleObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
