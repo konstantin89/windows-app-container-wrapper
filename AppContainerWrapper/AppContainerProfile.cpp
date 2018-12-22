@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "AppContainerProfile.h"
 
 AppContainerProfile::AppContainerProfile()

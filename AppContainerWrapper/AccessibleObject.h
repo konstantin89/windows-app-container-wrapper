@@ -14,6 +14,11 @@ struct AccessibleObject
 	std::string name;
 	SE_OBJECT_TYPE type;
 	DWORD accessMask;
+
+	LPSTR getNameAsLpstr()
+	{
+		return const_cast<char *>(name.c_str());
+	}
 };
 
 #endif

@@ -8,7 +8,7 @@
 class AppContainerWrapper
 {
 public:
-	static DWORD CreateProfile(
+	static DWORD CreateAppContainerProfile(
 		__in std::wstring aProfileName, 
 		__out AppContainerProfile& aProfile);
 
@@ -31,17 +31,20 @@ public:
 		__in std::vector<AccessibleObject>& aAllowedObjects);
 
 private:
-	static DWORD createProfile(
+	static DWORD createAppContainerProfile(
 		__in std::wstring aProfileName,
 		__in std::wstring aDisplayName,
 		__in std::wstring aDescription,
 		__in std::vector<SID_AND_ATTRIBUTES> aCapabilities,
 		__out AppContainerProfile& aProfile);
 
+	static DWORD openExistingAppContainerProfile(
+		__in std::wstring aProfileName,
+		__out AppContainerProfile& aProfile);
+
 	static DWORD startProcInContainer(
 		__in std::string aPeFilePath,
 		__in AppContainerProfile& aProfile,
-		__in std::vector<std::wstring>& aFilesWithGrantedAccess,
 		__in int aProcCreationParams,
 		__out LPPROCESS_INFORMATION aProcessInfo);
 
