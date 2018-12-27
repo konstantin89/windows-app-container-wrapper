@@ -2,18 +2,9 @@
 #include "AppContainerWrapper.h"
 #include <iostream>
 
-void logError(DWORD aErrCode, std::string aMethodName)
-{
-	std::cout << "[X] " << aMethodName.c_str()
-		<< " failed with error code " << aErrCode 
-		<< std::endl;
-}
-
-void logSuccess(std::string aMethodName)
-{
-	std::cout << "[V] " << aMethodName.c_str()
-		<< " succeed" << std::endl;
-}
+#define LOG_MESSAGE(msg) do {std::cout << "[ ] " << msg << std::endl; } while(0)
+#define LOG_ERROR(msg)   do {std::cout << "[X] " << msg << std::endl; } while(0)
+#define LOG_SUCCESS(msg) do {std::cout << "[V] " << msg << std::endl; } while(0)
 
 DWORD runAppContainerExample(std::string aProcToRun)
 {
@@ -24,7 +15,7 @@ DWORD runAppContainerExample(std::string aProcToRun)
 
 	if (lRetVal != ERROR_SUCCESS)
 	{
-		logError(lRetVal, "CreateProfile");
+		LOG_ERROR("CreateProfile failed");
 		return lRetVal;
 	}
 
@@ -35,15 +26,32 @@ DWORD runAppContainerExample(std::string aProcToRun)
 
 	if (lRetVal != ERROR_SUCCESS)
 	{
-		logError(lRetVal, "StartProcInContainer");
+		LOG_ERROR("StartProcInContainer failed");
 	}
 
-	return lRetVal;
+	return 0;
 }
 
 int main(int argc, char* argv[])
 {
-	auto lRetVal = runAppContainerExample(argv[0]);
+	bool lIsInContainer = false;
+
+	auto lRetVal = AppContainerWrapper::IsCurrentProcessInContainer(lIsInContainer);
+
+	if (lRetVal != ERROR_SUCCESS)
+	{
+		LOG_ERROR("IsCurrentProcessInContainer failed");
+	}
+
+	if (lIsInContainer)
+	{
+		LOG_SUCCESS("Running in Windows AppContainer process");
+	}
+	else
+	{
+		LOG_MESSAGE("Starting Windows AppContainer process");
+		lRetVal = runAppContainerExample(argv[0]);
+	}
 
 	return lRetVal;
 }

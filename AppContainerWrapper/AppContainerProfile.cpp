@@ -10,7 +10,7 @@ AppContainerProfile::~AppContainerProfile()
 {
 	if (mSid)
 	{
-		delete mSid;
+		FreeSid(mSid);
 		mSid = NULL;
 	}
 }
