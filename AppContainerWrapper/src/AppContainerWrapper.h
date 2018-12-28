@@ -1,7 +1,10 @@
 #ifndef __APP_CONTAINER_WRAPPER_H
 #define __APP_CONTAINER_WRAPPER_H
 
-#include "pch.h"
+#include <Windows.h>
+#include <string>
+#include <vector>
+
 #include "AppContainerProfile.h"
 #include "AccessibleObject.h"
 
@@ -12,10 +15,10 @@ public:
 		__in std::wstring aProfileName, 
 		__out AppContainerProfile& aProfile);
 
-	static DWORD DeleteAppContainerProfile(
+	static DWORD DeleteContainerProfile(
 		__in AppContainerProfile& aProfileName);
 
-	static DWORD DeleteAppContainerProfile(
+	static DWORD DeleteContainerProfile(
 		__in std::wstring aProfileName);
 
 	static DWORD IsCurrentProcessInContainer(

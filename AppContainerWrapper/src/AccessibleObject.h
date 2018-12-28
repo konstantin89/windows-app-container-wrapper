@@ -1,7 +1,6 @@
 #ifndef __ACCESSIBLE_OBJECT_H
 #define __ACCESSIBLE_OBJECT_H
 
-#include "pch.h"
 #include <string>
 #include <accctrl.h>
 

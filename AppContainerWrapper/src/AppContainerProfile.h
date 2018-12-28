@@ -1,7 +1,9 @@
 #ifndef __APP_CONTAINER_PROFILE_H
 #define __APP_CONTAINER_PROFILE_H
 
-#include "pch.h"
+#include <Windows.h>
+#include <string>
+#include <vector>
 
 struct AppContainerProfile
 {
