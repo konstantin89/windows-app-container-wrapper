@@ -28,6 +28,9 @@ DWORD runAppContainerExample(std::string aProcToRun)
 		LOG_ERROR("StartProcInContainer failed");
 	}
 
+	WaitForSingleObject(lContainerProcessInfo.hProcess, INFINITE);
+	LOG_MESSAGE("AppContainer process terminated");
+
 	return 0;
 }
 
