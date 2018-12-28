@@ -2,3 +2,5 @@ ipch
 .vs
 Debug
 Release
+lib
+

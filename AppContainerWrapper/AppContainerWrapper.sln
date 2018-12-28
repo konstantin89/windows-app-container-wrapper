@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppContainerWrapper", "AppContainerWrapper.vcxproj", "{665F68C3-F06B-4736-8D7F-997E298D0AA9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppContainerTests", "..\AppContainerTests\AppContainerTests.vcxproj", "{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{665F68C3-F06B-4736-8D7F-997E298D0AA9}.Release|x64.Build.0 = Release|x64
 		{665F68C3-F06B-4736-8D7F-997E298D0AA9}.Release|x86.ActiveCfg = Release|Win32
 		{665F68C3-F06B-4736-8D7F-997E298D0AA9}.Release|x86.Build.0 = Release|Win32
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Debug|x64.ActiveCfg = Debug|x64
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Debug|x64.Build.0 = Debug|x64
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Debug|x86.ActiveCfg = Debug|Win32
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Debug|x86.Build.0 = Debug|Win32
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Release|x64.ActiveCfg = Release|x64
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Release|x64.Build.0 = Release|x64
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Release|x86.ActiveCfg = Release|Win32
+		{9AE53987-3D64-4DD6-9C6C-FC8E765B5C22}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
