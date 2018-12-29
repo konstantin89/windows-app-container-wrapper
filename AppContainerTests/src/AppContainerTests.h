@@ -1,6 +1,11 @@
 #include "AppContainerWrapper.h"
 
+#include <iostream>
 #include <utility>
+
+#define LOG_MESSAGE(msg) do {std::cout << "[ ] " << msg << std::endl; } while(0)
+#define LOG_ERROR(msg)   do {std::cout << "[X] " << msg << std::endl; } while(0)
+#define LOG_SUCCESS(msg) do {std::cout << "[V] " << msg << std::endl; } while(0)
 
 class AppContainerTests
 {
@@ -10,17 +15,20 @@ public:
 	using EnvVarAndValueVec = std::vector<EnvVarAndValuePair>;
 
 	/**
-	* @brief: List all visible processes.
+	* @brief: Get the values of Windows enviorment variables.
 	*/
-	static DWORD ListVisibleProcessNames(
-		__out std::vector<std::wstring>& aProcNamesVec);
-
 	static DWORD GetEnviormentVariables(
 		__out EnvVarAndValueVec& aEnvVariavles);
 
-	static DWORD GetEnviormentVariable(
-		__in  std::string aVarName,
-		__out std::string& aVarValue);
+public: 
+
+	static DWORD FilePermissionsTest();
+
+	static DWORD VisibleProcessesTest();
+
+	static DWORD EnviormentVariablesTest();
+
+
 
 private:
 

@@ -21,9 +21,11 @@
   <ItemGroup>
     <ClCompile Include="src\AppContainerTests.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\OsUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AppContainerTests.h" />
+    <ClInclude Include="src\OsUtils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -16,9 +16,15 @@
     <ClCompile Include="src\AppContainerTests.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\OsUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AppContainerTests.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OsUtils.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
